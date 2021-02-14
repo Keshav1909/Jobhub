@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="init_home.css">
+    <title>XYZ | Home page</title>
+</head>
+<body>
+    <div class="nav">
+        <li class="proj_name" >Lorem</li>
+        <div class="nav_right">
+            <div class="search">
+            <li id="search_bar_box"><input type="text" placeholder="Search..." class="search_bar"></li>
+            <a href=""><li id="search_box"><img src="https://icon-library.com/images/white-search-icon-transparent-background/white-search-icon-transparent-background-15.jpg" id="search_img" alt=""></li></a>
+            </div>
+            <li id="icon" onclick="callBoth()"><img src="https://cdn3.iconfinder.com/data/icons/web-ui-3/128/Menu-2-512.png" id="menu_icon" alt=""></li>
+        </div>
+    </div>
+    <div class="list">
+        <ul>
+            <a href=""><li class="list_li">Lorem_1</li></a>
+            <a href=""><li class="list_li">Lorem_2</li></a>
+            <a href=""><li class="list_li">Lorem_3</li></a>
+            <a href=""><li class="list_li">Lorem_4</li></a>
+            <a href=""><li class="list_li">Lorem_5</li></a>
+            <a href=""><li class="list_li">Lorem_6</li></a>
+            <a href=""><li class="list_li">Lorem_7</li></a>
+        </ul>
+    </div>
+    <div class="container_2">
+        <p>Welcome to mane<br><a href="https://codepen.io/cssparadise">By- Keshav sarda,Anurag saraf,Aditya singh</a></p>
+    </div>
+    <div class="container_1">
+        <div id="slider">
+            <div id="box">
+               <span id="a"><span class="text"><a href="">1) 1st Image</a></span><span class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad quaerat iste sint cum architecto maiores ex aut, nihil, vel asperiores ea, culpa amet? Debitis alias nesciunt consequatur consectetur exercitationem.
+               </span><img src="https://besthqwallpapers.com/img/original/144350/neon-lines-background-dark-abstract-abstraction-lines-light-background-neon-lines.jpg"></span> 
+               <span id="b"><span class="text"><a href="">2) 2nd Image</a></span><span class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad quaerat iste sint cum architecto maiores ex aut, nihil, vel asperiores ea, culpa amet? Debitis alias nesciunt consequatur consectetur exercitationem.
+                </span><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/07/shutterstock_582803470.jpg?w=750"></span> 
+               <span id="c"><span class="text"><a href="">3) 3rd Image</a></span><span class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad quaerat iste sint cum architecto maiores ex aut, nihil, vel asperiores ea, culpa amet? Debitis alias nesciunt consequatur consectetur exercitationem.
+                </span><img src="https://image.freepik.com/free-vector/digial-circuit-diagram-technology-background_1017-28403.jpg"></span> 
+               <span id="d"><span class="text"><a href="">4) 4th Image</a></span><span class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad quaerat iste sint cum architecto maiores ex aut, nihil, vel asperiores ea, culpa amet? Debitis alias nesciunt consequatur consectetur exercitationem.
+               </span><img src="https://media.gettyimages.com/videos/4k-abstract-bokeh-background-loop-video-id812718952?s=640x640"></span> 
+               <span id="e"><span class="text"><a href="">5) 5th Image</a></span><span class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad quaerat iste sint cum architecto maiores ex aut, nihil, vel asperiores ea, culpa amet? Debitis alias nesciunt consequatur consectetur exercitationem.
+               </span><img src="https://www.adweek.com/wp-content/uploads/2020/03/behr-zoom-background-1-2020.jpg"></span> 
+            </div>
+            <button class="prev" onclick="prevImage()"><</button>
+            <button class="next" onclick="nextImage()">></button>
+        </div>
+        <script>
+            var slider_content=document.getElementById('box');
+            var image=[document.getElementById("a").innerHTML,document.getElementById("b").innerHTML,document.getElementById("c").innerHTML,document.getElementById("d").innerHTML,document.getElementById("e").innerHTML];
+            var len = image.length;
+            i=0;
+            
+            function nextImage(){
+                if(i<image.length-1){
+                    i = i+1;
+                }else{
+                    i = 0;
+                }
+                slider_content.innerHTML=image[i];
+            }
+            function prevImage(){
+                if(i<image.length+1 && i>0){
+                    i=i-1;}
+                    else{
+                        i=image.length-1;
+                    }
+                    slider_content.innerHTML=image[i];
+            }
+            
+        </script>
+        <div class="slider_desc">
+            Description
+        </div>
+    </div>
+   
+    <!-- <div class="container_3">
+        <ul class="card_container">
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="">
+                <div class="heading_5">Lorem ipsum dolor sit.</div>
+                <div class="content_5">Lorem ipsum dolor, sit amet </div>    
+            </div>
+            <div class="card">
+                <img src="https://i.pinimg.com/originals/3e/c6/19/3ec619d9f96fc07327173610e2246f94.jpg" alt="">
+                <div class="heading_5">Lorem ipsum dolor sit.</div>
+                <div class="content_5">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>    
+            </div>
+            <div class="card">
+                <img src="https://img2.10bestmedia.com/Images/Photos/352450/GettyImages-913753556_54_990x660.jpg" alt="">
+                <div class="heading_5">Lorem ipsum dolor sit.</div>
+                <div class="content_5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>    
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3MNQhQA4dhNBy7ssVm-q9NUbQgasbpbY93Q&usqp=CAU" alt="">
+                <div class="heading_5">Lorem ipsum dolor sit.</div>
+                <div class="content_5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>    
+            </div>
+          
+        </ul>
+    </div> -->
+ <div class="section2">   
+    <div class="blog-posts">
+        <div class="post">
+            <img src="th.jpg" alt="" class="post-img">
+            <div class="post-content">
+                <h3>lorepp fwflen f,ww fwfkl,f,mwklrw rm, klwrnkl  mlrwkln</h3>
+                <span class="date">July 13</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-posts">
+        <div class="post">
+            <img src="th.jpg" alt="" class="post-img">
+            <div class="post-content">
+                <h3>lorepp</h3>
+                <span class="date">July 13</span>
+            </div>
+        </div>
+    </div>
+    <div class="blog-posts">
+        <div class="post">
+            <img src="th.jpg" alt="" class="post-img">
+            <div class="post-content">
+                <h3>lorepp</h3>
+                <span class="date">July 13</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-posts">
+        <div class="post">
+            <img src="th.jpg" alt="" class="post-img">
+            <div class="post-content">
+                <h3>lorepp</h3>
+                <span class="date">July 13</span>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+    <div class="container_4">
+        <div class="heading_4">
+            Frequently Searched
+        </div>
+        <div class = "component_container">
+        <div class="li_component"><img src="https://mocah.org/uploads/posts/502653-justin-maller.jpg" alt=""><a href=""><li class="desc_4">Desc</li></a></div>
+        <div class="li_component"><img src="https://mocah.org/uploads/posts/502653-justin-maller.jpg" alt=""><a href=""><li class="desc_4">Desc</li></a></div>
+        <div class="li_component"><img src="https://mocah.org/uploads/posts/502653-justin-maller.jpg" alt=""><a href=""><li class="desc_4">Desc</li></a></div>
+        <div class="li_component"><img src="https://mocah.org/uploads/posts/502653-justin-maller.jpg" alt=""><a href=""><li class="desc_4">Desc</li></a></div>
+        </div>
+    </div>
+    <div class="footer">Footer</div>
+</body>
+<script src="init_home.js"></script>
+</html>
